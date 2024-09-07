@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-image"></div>
+    <div class="resume-container">
+        <form id="resumeForm">
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </fieldset>
+            
+            <fieldset>
+                <legend>Education</legend>
+                <textarea id="education" name="education" rows="4" placeholder="Your education background"></textarea>
+            </fieldset>
+            
+            <fieldset>
+                <legend>Work Experience</legend>
+                <textarea id="workExp" name="workExp" rows="4" placeholder="Your work experience"></textarea>
+            </fieldset>
+            
+            <fieldset>
+                <legend>Skills</legend>
+                <textarea id="skills" name="skills" rows="4" placeholder="Your skills"></textarea>
+            </fieldset>
+
+            <div class="upload-container">
+                <input type="file" id="photoInput" accept="image/*">
+                <label for="photoInput" class="upload-label">Upload Photo</label>
+            </div>
+            <div class="photo-message" id="photoMessage"></div>
+
+            <button type="button" id="generateResume">Generate Resume</button>
+        </form>
+
+        <div class="resume-output" id="resumeOutput">
+            <h1>Resume</h1>
+            <img id="resumePhoto" class="resume-photo" src="" alt="Profile Photo">
+            <h2>Personal Details</h2>
+            <p id="resumeName">Name></p>
+            <p id="resumeEmail">Email</p>
+            <h2>Education</h2>
+            <p id="resumeEducation"></p>
+            <h2>Work Experience</h2>
+            <p id="resumeWorkExp"></p>
+            <h2>Skills</h2>
+            <p id="resumeSkills"></p>
+            <button id="editResume">Edit Resume</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
